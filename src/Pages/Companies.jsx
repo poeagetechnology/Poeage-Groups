@@ -179,17 +179,18 @@ export default function UltraCompanies() {
 
   return (
     <section className="relative py-24 bg-white overflow-hidden">
-
       {/* BACKGROUND */}
       <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-blue-300/20 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-300/20 blur-[120px] rounded-full" />
 
       <div className="relative max-w-7xl mx-auto px-4">
-
         {/* TITLE */}
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-4xl font-bold">
-            Our <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Ecosystem</span>
+            Our{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              Ecosystem
+            </span>
           </h2>
           <p className="text-gray-500 mt-4 text-sm sm:text-base">
             Explore our companies and services
@@ -224,7 +225,7 @@ export default function UltraCompanies() {
               whileHover={{ y: -8 }}
               className="group p-6 rounded-3xl border bg-white/70 backdrop-blur-xl hover:shadow-2xl transition"
             >
-              <img src={c.logo} className="h-12 mb-4" />
+              <img src={c.logo} className="h-12 mb-4" alt={c.name} />
 
               <h3 className="text-lg font-semibold">{c.name}</h3>
               <p className="text-gray-500 text-sm mt-2">{c.desc}</p>
@@ -256,7 +257,6 @@ export default function UltraCompanies() {
                 exit={{ scale: 0.85 }}
                 onClick={(e) => e.stopPropagation()}
               >
-
                 <button
                   onClick={() => setSelectedCompany(null)}
                   className="absolute top-4 right-4 text-gray-400 hover:text-black"
@@ -265,28 +265,36 @@ export default function UltraCompanies() {
                 </button>
 
                 <div className="p-6">
-
                   <div className="flex items-center gap-4 mb-6">
-                    <img src={selectedCompany.logo} className="h-12" />
+                    <img
+                      src={selectedCompany.logo}
+                      className="h-12"
+                      alt={selectedCompany.name}
+                    />
                     <div>
-                      <h2 className="text-xl font-bold">{selectedCompany.name}</h2>
-                      <p className="text-gray-500 text-sm">{selectedCompany.desc}</p>
+                      <h2 className="text-xl font-bold">
+                        {selectedCompany.name}
+                      </h2>
+                      <p className="text-gray-500 text-sm">
+                        {selectedCompany.desc}
+                      </p>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-20">
                     {selectedCompany.points.map((p, i) => (
-                      <div key={i} className="bg-gray-50 rounded-xl px-4 py-3 text-sm">
+                      <div
+                        key={i}
+                        className="bg-gray-50 rounded-xl px-4 py-3 text-sm"
+                      >
                         ✅ {p}
                       </div>
                     ))}
                   </div>
-
                 </div>
 
                 {/* CTA */}
                 <div className="sticky bottom-0 bg-white border-t p-4 flex gap-3">
-
                   <a
                     href={`https://wa.me/917358039616?text=Hi, I am interested in ${selectedCompany.name}`}
                     target="_blank"
@@ -302,14 +310,11 @@ export default function UltraCompanies() {
                   >
                     Contact
                   </a>
-
                 </div>
-
               </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
-
       </div>
     </section>
   );
