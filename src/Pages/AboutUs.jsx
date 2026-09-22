@@ -39,15 +39,26 @@ export default function PoeageEcosystem() {
             </p>
           </div>
 
-          {/* FOUNDER */}
-          <div className="border-l-4 border-blue-600 pl-4 sm:pl-6">
-            <p className="text-gray-600 italic text-sm sm:text-base">
-              “Building a powerful ecosystem where every innovation connects.”
-            </p>
-            <h3 className="mt-3 font-semibold text-gray-900">
-              Mr. Gowrishankar Gunasekaran
-            </h3>
-            <p className="text-xs sm:text-sm text-gray-500">Founder</p>
+          {/* FOUNDERS */}
+          <div className="flex flex-col gap-6 sm:flex-row sm:gap-8">
+            <div className="border-l-4 border-blue-600 pl-4 sm:pl-6 flex-1">
+              <p className="text-gray-600 italic text-sm sm:text-base">
+                “Building a powerful ecosystem where every innovation connects.”
+              </p>
+              <h3 className="mt-3 font-semibold text-gray-900">
+                Mr. Gowrishankar Gunasekaran
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-500">Founder</p>
+            </div>
+            <div className="border-l-4 border-blue-600 pl-4 sm:pl-6 flex-1">
+              <p className="text-gray-600 italic text-sm sm:text-base">
+                “Empowering businesses through scalable and innovative solutions.”
+              </p>
+              <h3 className="mt-3 font-semibold text-gray-900">
+                Mr. Dinesh Balan
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-500">Co-founder</p>
+            </div>
           </div>
 
           {/* COMPANY LIST */}
